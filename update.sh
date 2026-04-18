@@ -155,7 +155,7 @@ if [ "$pilihan" == "1" ]; then
   \"USER_ID\": \"$adminid\",
   \"NAMA_STORE\": \"$namastore\",
   \"GROUP_ID\": \"$groupid\",
-  \"PORT\": \"6969\",
+  \"PORT\": \"9999\",
   \"PAYMENT\": \"GOPAY\",
   \"GOPAY_KEY\": \"$GOPAY_KEY\"
 }" >/root/BotVPN2/.vars.json
@@ -178,7 +178,7 @@ if [ "$pilihan" == "2" ]; then
   \"USER_ID\": \"$adminid\",
   \"NAMA_STORE\": \"$namastore\",
   \"GROUP_ID\": \"$groupid\",
-  \"PORT\": \"6969\",
+  \"PORT\": \"9999\",
   \"PAYMENT\": \"ORKUT\",
   \"DATA_QRIS_ORKUT\": \"$DATA_QRIS_ORKUT\",
   \"AUTH_USERNAME_ORKUT\": \"$AUTH_USERNAME_ORKUT\",

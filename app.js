@@ -104,7 +104,7 @@ const fs = require('fs');
 const vars = JSON.parse(fs.readFileSync('./.vars.json', 'utf8'));
 
 const BOT_TOKEN = vars.BOT_TOKEN;
-const port = vars.PORT || 6969;
+const port = vars.PORT || 9999;
 const ADMIN = vars.USER_ID; 
 const NAMA_STORE = vars.NAMA_STORE || '@ARI_VPN_STORE';
 const GROUP_ID = vars.GROUP_ID;
