@@ -1718,7 +1718,7 @@ async function startSelectServer(ctx, action, type, page = 0) {
         const aFull = a.total_create_akun >= a.batas_create_akun ? 1 : 0;
         const bFull = b.total_create_akun >= b.batas_create_akun ? 1 : 0;
         if (aFull !== bFull) return aFull - bFull; // server penuh terakhir
-        return a.nama_server.localeCompare(b.nama_server); // urut alfabet kalau status sama
+        return b.nama_server.localeCompare(a.nama_server); // Z KE A
       });
 
       logger.info(`User ${ctx.from.id} melihat ${filteredServers.length} server dari ${servers.length} total`);
@@ -3969,7 +3969,7 @@ async function processDeposit(ctx, amount) {
       adminFee = 0;
 
       const res = await axios.post(
-        "https://api-gopay.sawargipay.cloud/qris/generate",
+        "https://v1-gateway.autogopay.site/qris/generate",
         { amount: finalAmount },
         {
           headers: {
@@ -4141,7 +4141,7 @@ async function checkQRISStatus() {
       if (vars.PAYMENT === "GOPAY") {
         // Cek status via API GoPay
         const res = await axios.post(
-          "https://api-gopay.sawargipay.cloud/qris/status",
+          "https://v1-gateway.autogopay.site/qris/status",
           { transaction_id: deposit.transactionId },
           {
             headers: {
